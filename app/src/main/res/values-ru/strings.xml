@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DEMOVO</string>
+    <!-- Messages Preferences -->
+    <string name="initvector">Вектор инициализации AES-CBC</string>
+    <string name="firstkey">Первый ключ</string>
+    <string name="secondkey">Второй ключ</string>
+    <string name="format">Форматирование текста</string>
+    <string name="style">Выбор темы приложения</string>
+    <string name="styletitle">Выберите тему приложения</string>
+    <string name="info">Информация о приложении</string>
+    <string name="infosummary">О приложении…</string>
+    <string name="stylesummary">Перезапустите приложение для применения изменений</string>
+    <string name="formatsummary">Для Discord, Telegram и т. д.</string>
+    <string name="title1">Настройки DEMOVO ES</string>
+    <string name="title2">Настройки вывода</string>
+    <string name="title3">Персонализация</string>
+    <string name="title4">Информация</string>
+    <string name="encode">ЗАШИФРОВАТЬ</string>
+    <string name="decode">РАСШИФРОВАТЬ</string>
+    <string name="copy">Копировать</string>
+    <string name="settings">Настройки</string>
+    <string name="reset">Сброс</string>
+    <string name="quit">Выход</string>
+    <string name="aboutapp">О приложении</string>
+    <string name="on">ВКЛ.</string>
+    <string name="off">ВЫКЛ.</string>
+    <string name="errordecode">Вы ввели текст, не являющийся шифром или неправильно указали ключи/соль.</string>
+    <string name="errorcode">Слишком большое значение 1 ключа.</string>
+    <string name="themechanged">Тема изменена</string>
+    <string name="thememessage">Приложение сейчас будет перезапущено</string>
+    <string name="salt">Соль</string>
+</resources>

@@ -1,0 +1,77 @@
+<resources>
+    <attr name="theme" format="reference"/>
+    <attr name="lock" format="reference"/>
+    <attr name="text" format="reference"/>
+    <attr name="info" format="reference"/>
+    <attr name="logo" format="reference"/>
+    <attr name="theming" format="reference"/>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="theme">@style/AppTheme</item>
+        <item name="lock">@drawable/ic_lock_white</item>
+        <item name="text">@drawable/ic_text_white</item>
+        <item name="info">@drawable/ic_info_white</item>
+        <item name="logo">@drawable/demovoinfo_white</item>
+        <item name="theming">@drawable/ic_theming_white</item>
+    </style>
+    <style name="AppTheme.Light" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">#008577</item>
+        <item name="theme">@style/AppTheme</item>
+        <item name="lock">@drawable/ic_lock</item>
+        <item name="text">@drawable/ic_text</item>
+        <item name="info">@drawable/ic_info</item>
+        <item name="logo">@drawable/demovoinfo</item>
+        <item name="theming">@drawable/ic_theming</item>
+    </style>
+    <style name="Sys" parent="android:Theme.DeviceDefault">
+        <item name="lock">@drawable/ic_lock_white</item>
+        <item name="text">@drawable/ic_text_white</item>
+        <item name="info">@drawable/ic_info_white</item>
+        <item name="logo">@drawable/demovoinfo_white</item>
+        <item name="theming">@drawable/ic_theming_white</item>
+    </style>
+    <style name="Sys.Light" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <item name="theme">@style/AppTheme</item>
+        <item name="lock">@drawable/ic_lock</item>
+        <item name="text">@drawable/ic_text</item>
+        <item name="info">@drawable/ic_info</item>
+        <item name="logo">@drawable/demovoinfo</item>
+        <item name="theming">@drawable/ic_theming</item>
+    </style>
+    <style name="Holo" parent="android:Theme.Holo">
+        <item name="lock">@drawable/ic_lock_white</item>
+        <item name="text">@drawable/ic_text_white</item>
+        <item name="info">@drawable/ic_info_white</item>
+        <item name="logo">@drawable/demovoinfo_white</item>
+        <item name="theming">@drawable/ic_theming_white</item>
+    </style>
+    <style name="Holo.Light" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="theme">@style/AppTheme</item>
+        <item name="lock">@drawable/ic_lock</item>
+        <item name="text">@drawable/ic_text</item>
+        <item name="info">@drawable/ic_info</item>
+        <item name="logo">@drawable/demovoinfo</item>
+        <item name="theming">@drawable/ic_theming</item>
+    </style>
+    <style name="Necro" parent="android:Theme">
+        <item name="lock">@drawable/ic_lock_white</item>
+        <item name="text">@drawable/ic_text_white</item>
+        <item name="info">@drawable/ic_info_white</item>
+        <item name="logo">@drawable/demovoinfo_white</item>
+        <item name="theming">@drawable/ic_theming_white</item>
+    </style>
+    <style name="Necro.Light" parent="android:Theme.Light">
+        <item name="lock">@drawable/ic_lock</item>
+        <item name="text">@drawable/ic_text</item>
+        <item name="info">@drawable/ic_info</item>
+        <item name="logo">@drawable/demovoinfo</item>
+        <item name="theming">@drawable/ic_theming</item>
+    </style>
+
+</resources>

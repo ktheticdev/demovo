@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">DEMOVO</string>
+
+    <!-- Preference Titles -->
+    <string name="initvector">CBC Initialization Vector</string>
+    <string name="firstkey">First key</string>
+    <string name="secondkey">Second key</string>
+    <string name="format">Text formatting</string>
+    <string name="style">Choose app theme</string>
+    <string name="styletitle">Choose app theme</string>
+    <string name="info">Info</string>
+    <string name="infosummary">About the app…</string>
+    <string name="stylesummary">Restart to apply changes</string>
+    <string name="formatsummary">For Discord, Telegram, etc.</string>
+    <string name="title1">DEMOVO ES Settings</string>
+    <string name="title2">Output settings</string>
+    <string name="title3">Themes</string>
+    <string name="title4">Info</string>
+    <string name="encode">ENCODE</string>
+    <string name="decode">DECODE</string>
+    <string name="copy">Copy</string>
+    <string name="settings">Settings</string>
+    <string name="reset">Reset</string>
+    <string name="quit">Quit</string>
+    <string name="aboutapp">About the app</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="errordecode">An error occurred. You\'ve probably entered wrong ciphered text, or keys you\'re using are wrong. Also check salt value.</string>
+    <string name="themechanged">Theme is changed</string>
+    <string name="thememessage">The app will now be restarted</string>
+    <string name="salt">Salt</string>
+    <string name="errorcode">First key value is too big.</string>
+</resources>

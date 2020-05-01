@@ -1,0 +1,12 @@
+<resources>
+    <attr name="logo" format="reference"/>
+    <!-- Base application theme. -->
+    <style name="Necro" parent="android:Theme">
+        <!-- Customize your theme here. -->
+        <item name="logo">@drawable/demovoinfo_white</item>
+    </style>
+    <style name="Necro.Light" parent="android:Theme.Light">
+        <item name="logo">@drawable/demovoinfo</item>
+    </style>
+
+</resources>

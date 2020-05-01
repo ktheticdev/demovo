@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title1">
+        <EditTextPreference
+            android:icon="?attr/lock"
+            android:defaultValue="defaultsalt"
+            android:key="salt"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/salt" />
+        <EditTextPreference
+            android:icon="?attr/lock"
+            android:defaultValue="228"
+            android:key="firstkey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/firstkey"
+            android:inputType="number"
+            android:digits="-0123456789"/>
+        <EditTextPreference
+            android:icon="?attr/lock"
+            android:defaultValue="1488"
+            android:key="secondkey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/secondkey" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title2">
+        <SwitchPreference
+            android:icon="?attr/text"
+            android:key="format"
+            android:title="@string/format"
+            android:summary="@string/formatsummary"
+            android:switchTextOn="@string/on"
+            android:switchTextOff="@string/off"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title3">
+        <ListPreference
+            android:id="@+id/style"
+            android:key="style"
+            android:icon="?attr/theming"
+            android:title="@string/style"
+            android:summary="@string/stylesummary"
+            android:defaultValue="1"
+            android:entries="@array/text_style"
+            android:entryValues="@array/int_style"
+            android:dialogTitle="@string/styletitle" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title4">
+        <Preference
+            android:icon="?attr/info"
+            android:key="info"
+            android:title="@string/info"
+            android:summary="@string/infosummary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.gontones.demovo"
+                android:targetClass="com.gontones.demovo.InfoActivity" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <attr name="logo" format="reference"/>
+    <!-- Base application theme. -->
+    <style name="Holo" parent="android:Theme.Holo">
+        <!-- Customize your theme here. -->
+        <item name="logo">@drawable/demovoinfo_white</item>
+    </style>
+    <style name="Holo.Light" parent="android:Theme.Holo.Light.DarkActionBar" tools:ignore="NewApi">
+        <item name="logo">@drawable/demovoinfo</item>
+    </style>
+    <style name="Sys" parent="android:Theme.DeviceDefault" tools:ignore="NewApi">
+        <item name="logo">@drawable/demovoinfo_white</item>
+    </style>
+    <style name="Sys.Light" parent="android:Theme.DeviceDefault.Light.DarkActionBar" tools:ignore="NewApi">
+        <item name="logo">@drawable/demovoinfo</item>
+    </style>
+    <style name="Necro" parent="android:Theme">
+        <item name="logo">@drawable/demovoinfo_white</item>
+    </style>
+    <style name="Necro.Light" parent="android:Theme.Light">
+        <item name="logo">@drawable/demovoinfo</item>
+    </style>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="text_style">
+        <item>Material Dark</item>//1
+        <item>Material White</item>//2
+        <item>System Look Dark</item>//3
+        <item>System Look White</item>//4
+        <item>Holo Dark</item>//5
+        <item>Holo White</item>//6
+    </string-array>
+    <string-array name="int_style">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+</resources>
