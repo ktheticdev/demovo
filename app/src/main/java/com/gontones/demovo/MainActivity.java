@@ -29,7 +29,6 @@ import static com.gontones.demovo.FirstRun.isFirstRun;
 public class MainActivity extends Activity implements View.OnClickListener {
     static String gotv;
     static String text = new String("UTF-8");
-    public static String aeskey;
     static String aescrypted;
     static String ciphered;
     static String decodeone;
@@ -122,7 +121,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 try {
                     caesarEncode();
-                    ConKey();
                     precipher();
                     base64code();
                     boolean format = prefs.getBoolean("format", false);
@@ -148,7 +146,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 keytoCipher = prefs.getString("secondkey", keytoCipher);
                 try {
                     base64decode();
-                    ConKey();
                     decipher();
                     caesarDecode();
                     result = original;
@@ -156,7 +153,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     try {
                         text = text.replace("`", "");
                         base64decode();
-                        ConKey();
                         decipher();
                         caesarDecode();
                         result = original;
@@ -224,13 +220,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     public static void precipher() {
         String salt = md5Custom(presalt);
-        TextEncryptor encryptor = Encryptors.text(aeskey, salt);
+        TextEncryptor encryptor = Encryptors.text(keytoCipher, salt);
         aescrypted = encryptor.encrypt(gotv);
     }
 
     public static void decipher() {
         String salt = md5Custom(presalt);
-        TextEncryptor encryptor = Encryptors.text(aeskey, salt);
+        TextEncryptor encryptor = Encryptors.text(keytoCipher, salt);
         decodetwo = encryptor.decrypt(decodeone);
     }
 
@@ -254,9 +250,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         return md5Hex;
     }
 
-    public static void ConKey() {
-        aeskey = md5Custom(keytoCipher);
-    }
 
     public static void caesarDecode() {
         char sym = 'x';
