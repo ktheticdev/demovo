@@ -11,8 +11,8 @@ android {
         applicationId "com.gontones.demovo"
         minSdkVersion 8
         targetSdkVersion 29
-        versionCode 3
-        versionName "vega-r2"
+        versionCode 4
+        versionName "Xray-mobile"
     }
     buildTypes {
         release {
