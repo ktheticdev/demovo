@@ -1,4 +1,5 @@
 package com.gontones.demovo;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -55,34 +56,42 @@ public class MainActivity extends Activity implements View.OnClickListener {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         style = Integer.parseInt(prefs.getString("style", "1"));
         try {
-            if (style == 1) {
-                setTheme(R.style.AppTheme);
-            } else if (style == 2) {
-                setTheme(R.style.AppTheme_Light);
-            } else if (style == 3) {
-                setTheme(R.style.Sys);
-            } else if (style == 4) {
-                setTheme(R.style.Sys_Light);
-            } else if (style == 5) {
-                setTheme(R.style.Holo);
-            } else if (style == 6) {
-                setTheme(R.style.Holo_Light);
-            } else if (style == 7) {
-                setTheme(R.style.Necro);
-            } else if (style == 8) {
-                setTheme(R.style.Necro_Light);
+            switch (style) {
+                case 1:
+                    setTheme(R.style.AppTheme);
+                    break;
+                case 2:
+                    setTheme(R.style.AppTheme_Light);
+                    break;
+                case 3:
+                    setTheme(R.style.Sys);
+                    break;
+                case 4:
+                    setTheme(R.style.Sys_Light);
+                    break;
+                case 5:
+                    setTheme(R.style.Holo);
+                    break;
+                case 6:
+                    setTheme(R.style.Holo_Light);
+                    break;
+                case 7:
+                    setTheme(R.style.Necro);
+                    break;
+                case 8:
+                    setTheme(R.style.Necro_Light);
             }
         } catch (Exception themed) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
                 setTheme(R.style.Holo);
                 SharedPreferences.Editor edit = prefs.edit();
                 edit.putString("style", "5");
-                edit.commit();
+                edit.apply();
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 setTheme(R.style.AppTheme);
                 SharedPreferences.Editor edit = prefs.edit();
                 edit.putString("style", "1");
-                edit.commit();
+                edit.apply();
             } else {
                 setTheme(R.style.Necro);
                 SharedPreferences.Editor edit = prefs.edit();
@@ -124,11 +133,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     precipher();
                     base64code();
                     boolean format = prefs.getBoolean("format", false);
-                    if (format == false) {
+                    if (!format) {
                         ciphered = ciphered.replace("\n", "");
                         result = ciphered;
                     }
-                    if (format == true) {
+                    if (format) {
                         ciphered = "`" + ciphered + "`";
                         ciphered = ciphered.replace("\n", "");
                         result = ciphered;
@@ -185,7 +194,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 ClipData clip = null;
                     clip = ClipData.newPlainText("", tvResult.getText().toString());
                     clipboard.setPrimaryClip(clip);
-                } else if(Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES. HONEYCOMB) {
+                } else {
                     android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
                     clipboard.setText(tvResult.getText().toString());
                 }
@@ -213,7 +222,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         while (x != text.length()) {
             sym = text.charAt(x);
             long caesar = (long) sym + sdvig;
-            gotv = gotv + (char) caesar;
+            gotv += (char) caesar;
             ++x;
         }
     }
@@ -259,7 +268,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         while (x != decodetwo.length()) {
             sym = decodetwo.charAt(x);
             long caesar = (long) sym - sdvig;
-            original = original + (char) caesar;
+            original += (char) caesar;
             ++x;
         }
     }
